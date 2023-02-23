@@ -35,7 +35,7 @@ class pedido(models.Model):
     
 
 
-#  deu erro
+
 class compra(models.Model):
     id_cliente = models.ForeignKey(cliente, on_delete=models.CASCADE)
     id_pedido = models.ForeignKey(pedido, on_delete=models.CASCADE)
