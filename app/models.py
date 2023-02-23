@@ -33,7 +33,9 @@ class pedido(models.Model):
     preco = models.FloatField(max_length=50)
     
     
-    
+
+
+#  deu erro
 class compra(models.Model):
     id_cliente = models.ForeignKey(cliente, on_delete=models.CASCADE)
     id_pedido = models.ForeignKey(pedido, on_delete=models.CASCADE)
@@ -41,7 +43,7 @@ class compra(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=['id_cliente', 'id_pedido'], name='nique_id_cliente_id_pedido_combination'
+                fields=['id_cliente', 'id_pedido'], name='unique_id_cliente_id_pedido_combination'
             )
         ]
     
