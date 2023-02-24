@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-
+#  Modelo da entidade Usuario
 class usuario(models.Model):
     nome = models.CharField(max_length=50)
     email = models.CharField(max_length=30)
@@ -13,11 +13,13 @@ class usuario(models.Model):
     
 
 
-
+#  Modelo da entidade Cliente
 class cliente(models.Model):
     id = models.ForeignKey(usuario, on_delete=models.CASCADE)
     id = models.BigAutoField(primary_key=True)
 
+    
+ #  Modelo da entidade Fornecedor
 
 class fornecedor(models.Model):
     id = models.ForeignKey(usuario, on_delete=models.CASCADE)
